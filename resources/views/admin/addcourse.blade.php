@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="/images/header_logo.png" />
-    <title>Login</title>
+    <title>Add Course</title>
     <link rel="stylesheet" type="text/css" href="{{ url('login.css') }}" />
 </head>
 <body>
@@ -16,27 +16,33 @@
         <div class="d-flex justify-content-center">
             <a href="https://uttarauniversity.edu.bd" class="logo d-flex align-items-center w-auto font-weight-bold font-size-15" style="color: #1D45B5 ">UTTARA UNIVERSITY</a>
         </div>
-        <div class="d-flex justify-content-center">
-            <p class="font-weight-bold base-color font-size-11"><i class="bi bi-info-circle-fill"></i> Sign in with your organizational ID number</p>
-        </div>    
+          
         </div>
         
-        <form class="login-form" method="POST" action="{{url('/home')}}">
+        <form class="login-form" method="POST" action="{{url('/adminhome')}}">
             @csrf
             <div class="input-group">
-             <input type="text" id="" name="user_id" placeholder="User ID">
+             <input type="text" id="" name="course_name" placeholder="Course Name">
             </div>
             <div class="input-group">
-             <input type="password" id="" name="user_password" placeholder="Password">
+             <input type="text" id="" name="course_code" placeholder="Course Code">
             </div>
-            <button type="submit">SIGN IN</button>
+            <div class="input-group">
+             <input type="text" id="" name="course_credit" placeholder="Course Credit">
+            </div>
+            <div class="input-group">
+             <input type="text" id="" name="batch" placeholder="Batch">
+            </div>
+            <div class="input-group">
+                <input type="text" id="" name="section" placeholder="Section">
+            </div>
+            <div class="input-group">
+                <input type="text" id="" name="faculty_id" placeholder="Faculty ID">
+            </div>
+            <button type="submit">Add Course</button>
         
         </form>
         
-        <div class="login-footer mt-5">
-            <p>New User? <a class="mt-5" href="{{url('/register')}}">Create New Account</a></p>
-            <p>Visit Uttara University <a class="mt-5" href="">Official website</a></p>
-        </div>
         
         </div>
 </body>
